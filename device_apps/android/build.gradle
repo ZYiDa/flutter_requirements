@@ -1,5 +1,3 @@
-package android
-
 group 'fr.g123k.deviceapps'
 version '1.0-SNAPSHOT'
 
