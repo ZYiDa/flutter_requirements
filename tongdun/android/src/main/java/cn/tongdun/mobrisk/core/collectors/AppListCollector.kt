@@ -54,11 +54,13 @@ class AppListCollector(packageManager: PackageManager) : AppListDataInterface {
     }
 
     private fun isSystemApp(packageInfo: PackageInfo): Boolean {
-        val isSysApp =
-            packageInfo.applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM == ApplicationInfo.FLAG_SYSTEM
-        val isSysUpd =
-            packageInfo.applicationInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP == ApplicationInfo.FLAG_UPDATED_SYSTEM_APP
-        return isSysApp || isSysUpd
+        return packageInfo.applicationInfo?.let { info ->
+            val isSysApp =
+                info.flags and ApplicationInfo.FLAG_SYSTEM == ApplicationInfo.FLAG_SYSTEM
+            val isSysUpd =
+                info.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP == ApplicationInfo.FLAG_UPDATED_SYSTEM_APP
+            isSysApp || isSysUpd
+        } ?: false
     }
 
 }
