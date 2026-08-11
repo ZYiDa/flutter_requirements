@@ -7,6 +7,7 @@
 -dontoptimize
 -dontnote java.**, javax.**, org.**
 -dontwarn android.support.**
+-dontwarn java.lang.invoke.StringConcatFactory
 #-overloadaggressively
 
 #-allowaccessmodification
