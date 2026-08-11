@@ -1,0 +1,4 @@
+rootProject.name = 'tong_dun'
+
+include ':trustdevice'
+project(':trustdevice').projectDir = new File(rootProject.projectDir, 'trustdevice')
