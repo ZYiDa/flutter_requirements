@@ -11,6 +11,12 @@ add_library(
         trustdevice_utils.cpp
         trustdevice_risk.cpp)
 
+target_link_options(
+        trustdevice
+        PRIVATE
+        "-Wl,-z,max-page-size=16384"
+        "-Wl,-z,common-page-size=16384")
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 
 find_library(

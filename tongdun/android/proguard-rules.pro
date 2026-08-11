@@ -13,9 +13,6 @@
 
 #-useuniqueclassmembernames
 
--dontwarn java.lang.invoke.StringConcatFactory
--dontwarn com.example.tong_dun.TongDunPlugin
-
 -keepattributes SourceFile, LineNumberTable, *Annotation*, Exceptions, InnerClasses
 
 -keep class cn.tongdun.mobrisk.TDRisk {

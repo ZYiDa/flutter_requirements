@@ -1,3 +1,1 @@
 -keep class cn.tongdun.**{*;}
--dontwarn java.lang.invoke.StringConcatFactory
--dontwarn com.example.tong_dun.TongDunPlugin
