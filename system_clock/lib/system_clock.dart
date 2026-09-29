@@ -21,4 +21,10 @@ class SystemClock {
   static Duration elapsedRealtime() {
     return clock.elapsedRealtime();
   }
+
+  /// 从开机到目前的毫秒数，包括休眠时间
+  static int get systemUpTime => uptime().inMilliseconds;
+
+  /// 从开机到目前的毫秒数，不包括休眠时间
+  static int get systemActiveTime => elapsedRealtime().inMilliseconds;
 }
