@@ -107,10 +107,10 @@ class FlutterDeviceApps {
       final Map<String, Object?> appInfoMap = {
         'appId': a1.packageName,
         'appName': a1.appName,
-        'firstInstallTime': 0,
+        'firstInstallTime': a1.firstInstallTime?.millisecondsSinceEpoch ?? 0,
         'fullName': '',
         'isExist': true,
-        'lastUpdateTime': 0,
+        'lastUpdateTime': a1.lastUpdateTime?.millisecondsSinceEpoch ?? 0,
         'scheme': '',
         'systemApp': a1.isSystem ?? false,
         'versionCode': a1.versionCode,
