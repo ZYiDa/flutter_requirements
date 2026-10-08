@@ -1,14 +1,19 @@
 # Flutter SMS Inbox
 
+[![pub package](https://img.shields.io/pub/v/flutter_sms_inbox.svg)](https://pub.dev/packages/flutter_sms_inbox)
+[![pub points](https://img.shields.io/pub/points/flutter_sms_inbox?color=2E8B57&label=pub%20points)](https://pub.dev/packages/flutter_sms_inbox/score)
+
 Flutter android SMS inbox library based on [Flutter SMS](https://github.com/babariviere/flutter_sms).
 
-## Installation
+### Dependencies
 
-Install the library from pub:
+This package in turn uses the permission handler package for permission handling, [Permission Handler](https://pub.dev/packages/permission_handler).
+
+You need to add it to your project:
 
 ```
 dependencies:
-  flutter_sms_inbox: ^1.0.1
+  permission_handler: ^10.2.0
 ```
 
 ## Querying SMS messages
@@ -32,7 +37,7 @@ The method `querySms` from the `SmsQuery` class returns a list of sms depending 
 
 ```
 await query.querySms(
-    kinds: [SmsQueryKind.Inbox, SmsQueryKind.Sent],
+    kinds: [SmsQueryKind.inbox, SmsQueryKind.sent],
 );
 ```
 You can also query all the sms messages sent and received from a specific contact:
